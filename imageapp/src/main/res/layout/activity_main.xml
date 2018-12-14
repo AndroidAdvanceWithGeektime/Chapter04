@@ -64,8 +64,14 @@
                 tools:layout_editor_absoluteX="119dp"
                 tools:layout_editor_absoluteY="136dp"/>
 
-
+            <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="onAnaylzar"
+                android:text="onAnaylzar"
+            />
         </LinearLayout>
+
 
     </ScrollView>
 </android.support.constraint.ConstraintLayout>
