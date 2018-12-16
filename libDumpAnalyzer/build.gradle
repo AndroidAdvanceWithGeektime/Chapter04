@@ -1,9 +1,0 @@
-apply plugin: 'java-library'
-
-dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation 'com.squareup.haha:haha:2.0.4'
-}
-
-sourceCompatibility = '1.7'
-targetCompatibility = '1.7'
