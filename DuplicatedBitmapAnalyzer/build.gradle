@@ -6,6 +6,8 @@ version 1.0
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.squareup.haha:haha:2.0.4'
+    implementation 'com.android.tools.ddms:ddmlib:25.3.0'
 }
 
 
