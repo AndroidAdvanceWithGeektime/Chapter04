@@ -1,1 +1,1 @@
-include ':DuplicatedBitmapAnalyzer', ':libDumpAnalyzer', ':imageapp'
+include ':DuplicatedBitmapAnalyzer'
