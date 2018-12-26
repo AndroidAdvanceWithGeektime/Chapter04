@@ -1,1 +1,1 @@
-include ':DuplicatedBitmapAnalyzer'
+include ':app', ':DuplicatedBitmapAnalyzer'
