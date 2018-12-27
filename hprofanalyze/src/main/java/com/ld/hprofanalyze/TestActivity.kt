@@ -127,19 +127,12 @@ class TestActivity : AppCompatActivity() {
                     stackFrame.append(it.classObj.className).append("\n")
                     var nextInstanceToGcRoot = it.nextInstanceToGcRoot
                     while (nextInstanceToGcRoot != null) {
+                        nextInstanceToGcRoot.classObj
                         stackFrame.insert(0, nextInstanceToGcRoot.classObj.className + "\n")
                         nextInstanceToGcRoot = nextInstanceToGcRoot.nextInstanceToGcRoot
                     }
                     leak.stacks = stackFrame.toString()
                     Log.d(TAG, "width:${leak.width},height:${leak.height},buffersize:${leak.bufferSize},stack:${leak.stacks}")
-                    /*var stackField = it::class.java.superclass.getDeclaredField("mStack")
-                    stackField.isAccessible = true
-                    var stackValue: StackTrace = stackField.get(it) as StackTrace
-                    var stackFrameField = stackValue::class.java.getField("mFrames")
-                    stackFrameField.isAccessible = true
-                    var stackFrameArray = stackFrameField.get(stackValue)
-                    var stackLength = Array.getLength(stackFrameArray)
-*/
                 }
             }
         }
