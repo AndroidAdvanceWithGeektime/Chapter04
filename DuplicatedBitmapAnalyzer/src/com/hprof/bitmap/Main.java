@@ -33,7 +33,6 @@ public class Main {
         HprofBuffer buffer = new MemoryMappedFileBuffer(heapDumpFile);
         HprofParser parser = new HprofParser(buffer);
         Snapshot snapshot = parser.parse();
-        // 必须执行这行代码
         snapshot.computeDominators();
 
         ClassObj bitmapClass = snapshot.findClass("android.graphics.Bitmap");
@@ -44,10 +43,8 @@ public class Main {
         // 从 heap 中获取 bitmap instance 实例
         List<Instance> defaultBmInstance = bitmapClass.getHeapInstances(defaultHeap.getId());
         List<Instance> appBmInstance = bitmapClass.getHeapInstances(appHeap.getId());
-
         defaultBmInstance.addAll(appBmInstance);
 
-        // 从 bitmap 实例中获得 buffer 数组 map
         List<DuplicatedCollectInfo> collectInfos = collectSameBitmap(snapshot, defaultBmInstance);
         for (DuplicatedCollectInfo info : collectInfos) {
             println(info.string());

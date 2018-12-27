@@ -131,6 +131,9 @@ public final class LeakTraceElement implements Serializable {
     return false;
   }
 
+  public String getClassName(){
+    return className;
+  }
   /**
    * Returns {@link #className} without the package.
    */
@@ -158,7 +161,7 @@ public final class LeakTraceElement implements Serializable {
       string += holder.name().toLowerCase(US) + " ";
     }
 
-    string += getSimpleClassName();
+    string += getClassName();
 
     if (reference != null) {
       String referenceName = reference.getDisplayName();
