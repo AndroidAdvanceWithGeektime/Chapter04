@@ -3,9 +3,11 @@ apply plugin: 'java'
 
 
 version 1.0
+sourceCompatibility = 1.8
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.squareup.haha:haha:2.0.4'
 }
 
 
