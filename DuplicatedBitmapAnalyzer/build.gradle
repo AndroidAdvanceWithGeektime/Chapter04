@@ -1,11 +1,10 @@
 apply plugin: 'java'
 
-
-
 version 1.0
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.squareup.haha:haha:2.0.4'
 }
 
 
@@ -13,6 +12,14 @@ jar {
     manifest {
         attributes 'Main-Class': 'com.hprof.bitmap.Main'
         attributes 'Manifest-Version': version
+    }
+
+    sourceSets{
+        main{
+            java{
+                srcDir 'src'
+            }
+        }
     }
 
     from {
