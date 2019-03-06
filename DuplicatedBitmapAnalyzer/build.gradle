@@ -6,6 +6,8 @@ version 1.0
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    compile 'com.squareup.haha:haha:2.0.4'
+    compile 'com.google.code.gson:gson:2.8.5'
 }
 
 
