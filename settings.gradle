@@ -1,1 +1,2 @@
 include ':DuplicatedBitmapAnalyzer'
+include ':hprof'
